@@ -1,3 +1,20 @@
+
+# Developer Notes
+
+I have used NPM to manage the dependencies. 
+All the config has been set up manually
+
+Start the development server:
+`npm run start`
+
+Build:
+`npm run build`
+
+Tests:
+`npm run test`
+
+
+
 # Neurons Front-end Developer Coding Test
 Be sure to read **all** of this document carefully, and follow the guidelines within.
 
@@ -142,3 +159,4 @@ Please write the hiring manager an email with any questions you may have along t
 
 -------------------------------------------------------------------------------------
 Credit to https://github.com/Superformula/frontend-test for the test inspiration 
+
