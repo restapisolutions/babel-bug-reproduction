@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getTvShowAndCastData } from "./api/Api";
+import Layout from "./components/Layout";
 
-function App(){
-	return <div>My app</div>
+//For convenience I will store all state and stateSetters in the top component
+function App() {
+  const [tvShowAndCastData, setTvShowAndCastData] = useState({});
+  const [buttonActive, setButtonActive] = useState(0);
+  
+  useEffect(() => {
+    getTvShowAndCastData().then((res: any) => {});
+  }, []);
+
+  return (
+    <Layout
+      tvShowAndCastData={tvShowAndCastData}
+      buttonActive={buttonActive}
+      setButtonActive={setButtonActive}
+    ></Layout>
+  );
 }
 
 export default App;

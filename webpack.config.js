@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.tsx",
   output: { path: path.resolve("dist"), filename: "main.js" },
-  resolve:{
-    extensions: ['.ts','.tsx','.js']
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
   },
-  mode: 'development',
+  mode: "development",
   module: {
     rules: [
       { test: /\.jsx?$/, loader: "babel-loader", exclude: /node_modules/ },
@@ -23,9 +23,11 @@ module.exports = {
       },
     ],
   },
-  plugins : [new HtmlWebpackPlugin({
-    filename: 'index.html',
-    inject: true,
-    template: path.resolve(__dirname,"public","index.html")
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      inject: true,
+      template: path.resolve(__dirname, "public", "index.html"),
+    }),
+  ],
 };
